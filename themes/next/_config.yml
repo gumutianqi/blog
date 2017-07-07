@@ -244,16 +244,16 @@ mathjax:
 
 
 # Swiftype Search API Key
-swiftype_key: -UWs9vi9Y2EzjwKfsZap
+#swiftype_key: -UWs9vi9Y2EzjwKfsZap
 
 # Baidu Analytics ID
 baidu_analytics: 0488e4853b193a8f5575d31bd58df72a
 
 # Duoshuo ShortName
-duoshuo_shortname: blog-gumutianqi
+#duoshuo_shortname: blog-gumutianqi
 
 # 多说热评文章 true 或者 false
-duoshuo_hotartical: true
+#duoshuo_hotartical: true
 
 # Disqus
 #disqus_shortname:
@@ -286,11 +286,11 @@ duoshuo_hotartical: true
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: true
-  user_id: 561288
-  admin_nickname: 老古
+#duoshuo_info:
+#  ua_enable: true
+#  admin_enable: true
+#  user_id: 561288
+#  admin_nickname: 老古
 
 
 # Facebook SDK Support.
