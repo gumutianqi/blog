@@ -8,9 +8,6 @@ tags:
 permalink: rancher-free-style
 ---
 
-RancherOS 初体验
-===
-
 **先来欣赏一张 RancherOS 的系统架构图**
 
 ![rancheros](https://github.com/rancher/os/blob/master/docs/rancheros.png?raw=true)
