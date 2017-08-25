@@ -98,7 +98,16 @@ $ sudo ros install -c /var/lib/rancher/conf/cloud-config.yml -d /dev/sda
 ## 重启后，就不能直接通过rancher 帐号登录了；
 ## 只能 通过 SSH Keys 远程登录 ssh rancher@IP
 ```
+**安装必备的 Docker-Compose*
 
+```
+## 由于默认没有 curl command，先用 wget 代替
+wget https://github.com/docker/compose/releases/download/1.15.0/docker-compose-Linux-x86_64
+
+sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+
+chmod +x /usr/local/bin/docker-compose
+```
 **使用**
 
 到目前为止，已经可以愉快的使用 RancherOS 了，试试 Docker
