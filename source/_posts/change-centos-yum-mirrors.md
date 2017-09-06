@@ -12,7 +12,7 @@ permalink: change-centos-yum-mirrors
 
 ### 前言
 
-大家都知道CentOS 有个很方便的软件安装工具yum，但是默认安装完CentOS，系统里使用的是国外的CentOS更新源，这就造成了我们使用默认更新源安装或者更新软件时速度很慢的问题。
+大家都知道CentOS 有个很方便的软件安装工具yum，但是默认安装完 CentOS，系统里使用的是国外的CentOS更新源，这就造成了我们使用默认更新源安装或者更新软件时速度很慢的问题。
 
 为了使用yum工具能快速的安装更新软件，我们需要将默认的yum更新源配置为国内的更新源。yum更新源配置文件位于CentOS目录 `/etc/yum.repos.d/` 下。
 

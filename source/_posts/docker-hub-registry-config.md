@@ -3,8 +3,8 @@ title: 替换 Docker-Hub 的镜像源
 date: 2016-12-26 14:59:18
 categories: Docker
 tags: 
-	- Docker
-	- Linux
+ - Docker
+ - Linux
 permalink: docker-hub-registry-config
 ---
 

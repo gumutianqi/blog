@@ -3,8 +3,8 @@ title: 码农神器 HHKB-PRO2-TypeS 开箱入坑
 date: 2016-08-07 12:22:32
 categories: 各种入坑
 tags: 
-	- HHKB
-	- 键盘
+ - HHKB
+ - 键盘
 ---
 ## 序
 

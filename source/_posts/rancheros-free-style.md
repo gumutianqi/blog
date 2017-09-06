@@ -3,8 +3,8 @@ title: RancherOS 初体验
 date: 2017-08-17 20:12:50
 categories: Docker
 tags: 
-	- Docker
-	- Linux
+  - Docker
+  - Linux
 permalink: rancher-free-style
 ---
 
