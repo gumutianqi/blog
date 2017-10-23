@@ -8,14 +8,16 @@ permalink: python-versions-pyenv
 ---
 ## 序
 
-{% asset_img python-pyenv-logo.png [python-pyenv-logo] %}
-
 经常遇到这样的情况：
 
 *   系统自带的 Python 是 2.6，自己需要 Python 2.7 中的某些特性；
 *   系统自带的 Python 是 2.x，自己需要 Python 3.x；
 
+{% asset_img python-pyenv-logo.png [python-pyenv-logo] %}
+
 此时需要在系统中安装多个 Python，但又不能影响系统自带的 Python，即需要实现 Python 的多版本共存。[pyenv](https://github.com/yyuu/pyenv) 就是这样一个 Python 版本管理器。
+
+<!-- more -->
 
 ## 安装 Pyenv
 
