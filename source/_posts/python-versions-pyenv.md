@@ -7,6 +7,9 @@ tags:
 permalink: python-versions-pyenv
 ---
 ## 序
+
+{% asset_img python-pyenv-logo.png [python-pyenv-logo] %}
+
 经常遇到这样的情况：
 
 *   系统自带的 Python 是 2.6，自己需要 Python 2.7 中的某些特性；
