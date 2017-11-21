@@ -11,6 +11,8 @@ permalink: golang-framework-ide-tools
 
 自推出以来，Google的Go编程语言（Golang）越来越受主流用户的欢迎。在2016年12月的一份调研中，3,595名受访者中有89％表明他们在工作中或工作以外用Go语言编程。
 
+{% asset_img go-logo-3.jpg [Go Nuts] %}
+
 此外，在编程语言中，Go语言在专业知识和偏好方面排名最高。2017年7月，在[Tiobe的年度编程语言排名](https://www.tiobe.com/tiobe-index/)中，Go语言从去年的第55名一跃跳到了第10名。
 
 显然，Go语言吸引了来自不同学科的许多[程序员](http://www.codeceo.com/ "程序员")和软件开发外包专业人士。可以这么说，这全都是因为Go语言的易用性。
@@ -21,7 +23,7 @@ permalink: golang-framework-ide-tools
 
 我们收罗了Golang的顶级框架、IDE和工具列表，以供大家快速参考。建议添加到浏览器书签中，以便随时查看！
 
-{% asset_img go-logo-3.jpg [HHKB-Pro2-TypeS] %}
+<!-- more -->
 
 ---
 
