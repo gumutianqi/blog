@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Go,Golang," />
+
+
+
+
+
+  <link rel="alternate" href="/blog/rss2.xml" title="LarryKoo's Note" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="本文转载自：http://www.codeceo.com/article/golang-framework-ide-tools.html  自推出以来，Google的Go编程语言（Golang）越来越受主流用户的欢迎。在2016年12月的一份调研中，3,595名受访者中有89％表明他们在工作中或工作以外用Go语言编程。  此外，在编程语言中，Go语言在专业知识和偏好方面排名最高。2017年7月，">
+<meta name="keywords" content="Go,Golang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang指南：顶级Golang框架、IDE和工具列表(转载)">
+<meta property="og:url" content="http://gumutianqi.github.io/blog/2017/11/21/golang-framework-ide-tools/index.html">
+<meta property="og:site_name" content="LarryKoo&#39;s Note">
+<meta property="og:description" content="本文转载自：http://www.codeceo.com/article/golang-framework-ide-tools.html  自推出以来，Google的Go编程语言（Golang）越来越受主流用户的欢迎。在2016年12月的一份调研中，3,595名受访者中有89％表明他们在工作中或工作以外用Go语言编程。  此外，在编程语言中，Go语言在专业知识和偏好方面排名最高。2017年7月，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://gumutianqi.github.io/blog/2017/11/21/golang-framework-ide-tools/go-logo-3.jpg">
+<meta property="og:updated_time" content="2018-07-10T07:17:24.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Golang指南：顶级Golang框架、IDE和工具列表(转载)">
+<meta name="twitter:description" content="本文转载自：http://www.codeceo.com/article/golang-framework-ide-tools.html  自推出以来，Google的Go编程语言（Golang）越来越受主流用户的欢迎。在2016年12月的一份调研中，3,595名受访者中有89％表明他们在工作中或工作以外用Go语言编程。  此外，在编程语言中，Go语言在专业知识和偏好方面排名最高。2017年7月，">
+<meta name="twitter:image" content="http://gumutianqi.github.io/blog/2017/11/21/golang-framework-ide-tools/go-logo-3.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://gumutianqi.github.io/blog/2017/11/21/golang-framework-ide-tools/"/>
+
+
+
+
+
+  <title>Golang指南：顶级Golang框架、IDE和工具列表(转载) | LarryKoo's Note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0488e4853b193a8f5575d31bd58df72a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LarryKoo's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">天下武功为快不破</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/blog/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://gumutianqi.github.io/blog/blog/2017/11/21/golang-framework-ide-tools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Larry Koo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LarryKoo's Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Golang指南：顶级Golang框架、IDE和工具列表(转载)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T11:11:18+08:00">
+                2017-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/blog/2017/11/21/golang-framework-ide-tools/" class="leancloud_visitors" data-flag-title="Golang指南：顶级Golang框架、IDE和工具列表(转载)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文转载自：<a href="http://www.codeceo.com/article/golang-framework-ide-tools.html" target="_blank" rel="noopener">http://www.codeceo.com/article/golang-framework-ide-tools.html</a></p>
+</blockquote>
+<p>自推出以来，Google的Go编程语言（Golang）越来越受主流用户的欢迎。在2016年12月的一份调研中，3,595名受访者中有89％表明他们在工作中或工作以外用Go语言编程。</p>
+<img src="/blog/2017/11/21/golang-framework-ide-tools/go-logo-3.jpg" title="[Go Nuts]">
+<p>此外，在编程语言中，Go语言在专业知识和偏好方面排名最高。2017年7月，在<a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener">Tiobe的年度编程语言排名</a>中，Go语言从去年的第55名一跃跳到了第10名。</p>
+<p>显然，Go语言吸引了来自不同学科的许多<a href="http://www.codeceo.com/" title="程序员" target="_blank" rel="noopener">程序员</a>和软件开发外包专业人士。可以这么说，这全都是因为Go语言的易用性。</p>
+<p>作为一种编译型的开源编程语言，Go语言能使开发人员轻松构建简单可靠又高效的软件。它是更保守的语言，如C和C ++的创新和演变的产物。</p>
+<p>使用Go语言，可以减少代码输入量，并且编写稳健的API而不牺牲性能变得更加容易。 Go语言旨在实现可扩展性和并发性，从而实现优化。编译器可以在运行时前执行所有代码检查工作。</p>
+<p>我们收罗了Golang的顶级框架、IDE和工具列表，以供大家快速参考。建议添加到浏览器书签中，以便随时查看！</p>
+<a id="more"></a>
+<hr>
+<h1 id="Golang框架"><a href="#Golang框架" class="headerlink" title="Golang框架"></a>Golang框架</h1><p>Web框架可以帮助开发人员尽可能方便快捷地构建应用程序。Go语言还比较新，所以使用的框架带有充足的文档很重要。</p>
+<p>这里有9个框架可帮助你使用Go语言构建项目。</p>
+<h2 id="1-Revel"><a href="#1-Revel" class="headerlink" title="1.Revel"></a>1.Revel</h2><p>作为Go语言的高效生产力框架，<a href="https://revel.github.io/" target="_blank" rel="noopener">Revel</a>包含的Hot Code Reload工具可以让你在每次更改文件时重建项目。它还包括各种全面和高性能的功能，因此你不需要找外部库集成到框架中。</p>
+<h2 id="2-Beego"><a href="#2-Beego" class="headerlink" title="2.Beego"></a>2.Beego</h2><p><a href="https://beego.me/" target="_blank" rel="noopener">Beego</a>是一个完整的<a href="http://www.codeceo.com/article/mvc-framework-mvc-design.html" title="MVC框架" target="_blank" rel="noopener">MVC框架</a>，有自己的日志库、ORM和Web框架。你不需要再去安装第三方库。它有一个称为Bee Tool的内置工具，用于监视代码更改，并在检测到更改时运行任务。</p>
+<p>Beego可以为你节省很多时间，特别是在项目一开始，你要弄清楚日志框架或应用程序结构的时候。</p>
+<h2 id="3-Martini"><a href="#3-Martini" class="headerlink" title="3.Martini"></a>3.Martini</h2><p>受Sinatra启发，<a href="https://github.com/go-martini/martini" target="_blank" rel="noopener">Martini</a>是一个极其轻巧但功能强大的框架。它被开发用于用Golang编写模块化Web应用程序和服务。</p>
+<p>它的特点是非侵入式设计，快速易用，且包括各种处理程序和中间件。它能够为HTML5模式的AngularJS应用程序执行基本路由，异常处理和默认文档服务。</p>
+<p>Martini的最佳功能是可以使用反射，它允许开发人员动态地将数据插入到处理函数中并添加新的服务。Martini也完全兼容http.HandlerFunc界面。不过，缺点在于Martini框架不再维护了。</p>
+<h2 id="4-Gin-Gonic"><a href="#4-Gin-Gonic" class="headerlink" title="4.Gin Gonic"></a>4.Gin Gonic</h2><p><a href="https://gin-gonic.github.io/gin/" target="_blank" rel="noopener">Gin Gonic</a>是一个Web框架，有类似Martini的API，但性能更好。如果你以前使用过Martini，那么你也一定熟悉Gin Gonic。没用过Martini也没关系，只需要学习10分钟就能掌握Gin。就是这么容易！</p>
+<p>Gin Gonic是一个极简化的框架，仅包含最重要的库和功能。这使得它非常适合开发高性能<a href="http://www.codeceo.com/article/rest-api.html" title="REST API" target="_blank" rel="noopener">REST API</a>。此外，它比Martini快四十倍。</p>
+<p>你可以添加中间件、嵌套组、JSON验证以及渲染，并依然保持其最佳性能。Gin Gonic使用httprouter，Go语言最快的HTTP路由器。</p>
+<h2 id="5-Buffalo"><a href="#5-Buffalo" class="headerlink" title="5.Buffalo"></a>5.Buffalo</h2><p>要构建Go语言新的Web应用程序，使用<a href="https://github.com/gobuffalo/buffalo" target="_blank" rel="noopener">Buffalo</a>是一个快速又简单的方法。当你开始一个新项目时，Buffalo可以为你提供一切——从前端到后端开发。</p>
+<p>它具有热重载功能，这意味着dev命令将自动查看.go和.html文件。然后，它将为你重建并重启二进制文件。运行dev命令，你就能看到变化在你的眼前发生！</p>
+<p>Buffalo不仅仅是一个框架——它也是一个整体的Web开发生态系统，可以让你直接构建应用程序。</p>
+<h2 id="6-Goji"><a href="#6-Goji" class="headerlink" title="6.Goji"></a>6.Goji</h2><p><a href="https://goji.io/" target="_blank" rel="noopener">Goji</a>是一个轻量级的快速Web框架，将可组合性和简单性作为其主要优先级。很像net / http.ServeMux，Goji是一个极简的HTTP请求复用器。它包括Einhorn支持，允许在Goji中提供Websocket支持。</p>
+<p>其他功能包括URL模式，可重新配置的中间件堆栈，正常关机等。Goji可以用于生产，并在若干组织中提供了数以亿计个请求。</p>
+<h2 id="7-Tiger-Tonic"><a href="#7-Tiger-Tonic" class="headerlink" title="7.Tiger Tonic"></a>7.Tiger Tonic</h2><p>受Dropwizard启发，<a href="https://github.com/rcrowley/go-tigertonic" target="_blank" rel="noopener">Tiger Tonic</a>是开发JSON Web服务和构建高性能REST API的Go框架。为了忠于Golang的原则，Tiger Tonic努力保持正交特性。</p>
+<p>Tiger Tonic的缺点在于构建大型后端应用程序尚有不足之处。</p>
+<h2 id="8-Gocraft"><a href="#8-Gocraft" class="headerlink" title="8. Gocraft"></a>8. Gocraft</h2><p>这是又一个强大而简约的框架，<a href="https://github.com/gocraft/web" target="_blank" rel="noopener">Gocraft</a>提供快速和可扩展的路由性能。它将路由添加来自标准库的net / http包中。</p>
+<p>Gocraft是一个Go mux和中间件软件包，具有强大的投射和反射能力，可以静态输入代码。你还可以使用内置中间件添加可选功能或者自己编写。</p>
+<p>由于性能始终是开发人员最关心的问题之一，所以Gocraft是开发人员的绝佳选择。而且使用Gocraft框架编写后端Web应用程序很容易。</p>
+<h2 id="9-Mango"><a href="#9-Mango" class="headerlink" title="9.Mango"></a>9.Mango</h2><p>虽然<a href="https://github.com/paulbellamy/mango" target="_blank" rel="noopener">Mango</a>没有得到创作者Paul Bellamy的积极维护，但Go语言的许多用户仍然在使用它。Mango的优势在于它的模块化。你可以从各种库中选择，以包含在你的项目中。</p>
+<p>Mango让你可以尽可能快速又轻松地构建可重复使用的HTTP功能模块。它将一系列中间件和应用程序编译成单个HTTP服务器对象，以保持代码独立。</p>
+<h1 id="Golang的集成开发环境（IDE）"><a href="#Golang的集成开发环境（IDE）" class="headerlink" title="Golang的集成开发环境（IDE）"></a>Golang的集成开发环境（IDE）</h1><p>Golang的IDE随着Go语言的普及越来越受大家的欢迎。虽然还是有许多开发人员仍然喜欢使用<a href="http://www.codeceo.com/article/2015-12-best-editor.html" title="文本编辑器" target="_blank" rel="noopener">文本编辑器</a>，但也有很多开发人员更倾向于使用IDE。</p>
+<p>如果你正工作于具有广泛代码库的大型项目，那么IDE可以帮助你轻松组织代码和导航。此外，IDE可以帮助你测试代码并相应地编辑。</p>
+<p>以下是用Golang工作良好的顶尖IDE。</p>
+<h2 id="1-Gogland"><a href="#1-Gogland" class="headerlink" title="1.Gogland"></a>1.Gogland</h2><p>软件开发公司JetBrains发布了另一个可靠的IDE，这次是针对Golang发布的。<a href="https://www.jetbrains.com/go/" target="_blank" rel="noopener">Gogland</a>是一个商业IDE，为Go开发人员提供了一个强大的人机工程学环境。它还具有编码协助、调试器和集成终端的功能。</p>
+<p>由于Gogland是由一家已成立的公司创建的，所以它拥有广泛的IntelliJ插件生态系统，让你可以在需要更多工具的时候获得更多。</p>
+<h2 id="2-Visual-Studio-Code"><a href="#2-Visual-Studio-Code" class="headerlink" title="2. Visual Studio Code"></a>2. <a href="http://www.codeceo.com/article/visual-studio-code-usage.html" title="Visual Studio Code" target="_blank" rel="noopener">Visual Studio Code</a></h2><p>由Microsoft创建的<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>是一个功能齐全的开源IDE和代码编辑器，支持各种各样的编程语言。它的特点是智能完成；使用断点调用、调用堆栈和交互式控制台调试；内置Git集成；以及分层文件夹和文件浏览器。</p>
+<p>作为另一个流行的IDE，Visual Studio Code有一个Go开发人员定期贡献的支持社区。使用Visual Studio Code，你可以使用可用插件数组来扩展功能。</p>
+<h2 id="3-LiteIDE"><a href="#3-LiteIDE" class="headerlink" title="3. LiteIDE"></a>3. LiteIDE</h2><p><a href="https://github.com/visualfc/liteide" target="_blank" rel="noopener">LiteIDE</a>是五年多前创建的首个以Golang为中心的开源IDE。作为具有独特外观的C ++ Qt应用程序，LiteIDE提供代码管理、可配置构建命令、gdb和Delve调试器，使用WordApi——基于MIME类型的系统——自动完成和创建等等。它还提供JSON和Golang支持。</p>
+<h2 id="4-Wide"><a href="#4-Wide" class="headerlink" title="4.Wide"></a>4.Wide</h2><p><a href="https://github.com/b3log/wide" target="_blank" rel="noopener">Wide</a>是Golang程序员使用的基于Web的IDE。它专为协作开发而设计，适用于团队和Web开发机构。Wide功能包括代码高亮、调试、Git集成等。</p>
+<p>因为Wide是由一名中国开发者创建和维护的，所以其大部分文档和支持是中文的。</p>
+<h2 id="5-带有Go-Plus插件的Atom"><a href="#5-带有Go-Plus插件的Atom" class="headerlink" title="5.带有Go-Plus插件的Atom"></a>5.带有Go-Plus插件的Atom</h2><p>如果你已经在使用Atom，那么你可以通过一个名为<a href="https://atom.io/packages/go-plus" target="_blank" rel="noopener">go-plus</a>的<a href="http://www.codeceo.com/article/category/project" title="开源软件" target="_blank" rel="noopener">开源软件</a>包来改善Golang语言的代码编辑体验。使用go-plus，你可以立即获得关于语法和构建错误的实时反馈。</p>
+<p>Go-plus软件包提供了几乎所有Atom中对Golang的支持。它还可以用于工具，构建流程，linters，vet和coverage工具。</p>
+<p>Go-plus还包括各种代码片段和功能，如gocode的自动完成，gofmt、goreturns或goimports等的代码格式化。</p>
+<h2 id="6-带有GoClipse的Eclipse"><a href="#6-带有GoClipse的Eclipse" class="headerlink" title="6.带有GoClipse的Eclipse"></a>6.带有GoClipse的Eclipse</h2><p>由于Eclipse是广受欢迎的IDE，因此我们为其创建了许多插件。<a href="https://github.com/GoClipse/goclipse" target="_blank" rel="noopener">GoClipse</a>是针对Golang的Eclipse插件，提供Go源代码编辑，具有可配置的语法高亮和自动缩进以及大括号完成功能。</p>
+<p>GoClipse还可以作为项目向导和构建器来立即报告语法和构建错误。GoClipse的其他功能包括调试功能和代码辅助。</p>
+<h2 id="7-带有GoSublime的Sublime-Text"><a href="#7-带有GoSublime的Sublime-Text" class="headerlink" title="7.带有GoSublime的Sublime Text"></a>7.带有GoSublime的Sublime Text</h2><p>Sublime Text也是一个复杂的文本编辑器，具有大量的贡献者和开发者社区。因此，开发者为此IDE创建了各种各样的插件。</p>
+<p><a href="https://github.com/DisposaBoy/GoSublime" target="_blank" rel="noopener">GoSublime</a>是Sublime Text 3针对Golang的插件，在你编写代码时，提供来自Gocode的代码完成，lint /语法检查，自动添加和删除程序包导入，等等。</p>
+<h2 id="8-带有Vim-Go插件的Vim"><a href="#8-带有Vim-Go插件的Vim" class="headerlink" title="8.带有Vim-Go插件的Vim"></a>8.带有Vim-Go插件的Vim</h2><p>Vim是一个免费的开源IDE，可以定制和配置各种插件。如果你是Golang程序员，那么你可以使用Vim中由Fatih Arslan创建的vim-go插件。Vim-go自动安装所有必需的二进制文件，为Golang提供平滑的Vim集成。</p>
+<p><a href="https://github.com/fatih/vim-go" target="_blank" rel="noopener">Vim-go</a>是一款功能强大的插件套件，用于撰写和开发Go。其功能包括高级源代码分析，添加和删除导入路径，多次第三方支持，goto定义，快速文件执行等等。</p>
+<p>Vim-go是高度可定制的，可以根据你的需要启用或禁用各种功能。</p>
+<h2 id="9-Komodo"><a href="#9-Komodo" class="headerlink" title="9.Komodo"></a>9.Komodo</h2><p><a href="https://www.activestate.com/komodo-ide/golang-editor" target="_blank" rel="noopener">Komodo</a>是一个全功能的Go语言IDE，并且支持如Node.js，Python，Ruby，Perl等其他编程语言。使用这个Go IDE，你可以轻松地编写干净的代码。其功能包括高级代码编辑器，智能代码完成，语法检查，版本控制和单元测试，以及允许代码浏览和代码提示的Go Code Intelligence。</p>
+<p>Komodo的优点是，它可以很好地协助团队合作，因为允许多个开发人员同时编辑文档。只要一个许可证，Komodo就可以安装在Mac，Windows或Linux上。</p>
+<h2 id="10-带有Go语言（golang-org）支持插件的IntelliJ-IDEA"><a href="#10-带有Go语言（golang-org）支持插件的IntelliJ-IDEA" class="headerlink" title="10. 带有Go语言（golang.org）支持插件的IntelliJ IDEA"></a>10. 带有Go语言（golang.org）支持插件的IntelliJ IDEA</h2><p>IntelliJ IDEA（由JetBrains公司开发）是可以通过<a href="https://plugins.jetbrains.com/plugin/5047-go-language-golang-org-support-plugin" target="_blank" rel="noopener">Go语言支持插件</a>从而使用Golang的IDE。如果你想要在IntelliJ IDEA中使用Golang，那么你需要安装此插件，虽然不同于Gogland，它的功能有限。</p>
+<h1 id="Golang工具"><a href="#Golang工具" class="headerlink" title="Golang工具"></a>Golang工具</h1><p>Golang工具可用于各种项目和Web应用程序。使用这些有用的工具可以帮助开发人员尽可能快速而轻松地编写代码并构建应用程序。</p>
+<p>这里有一系列顶级的Golang工具以供参考。</p>
+<h2 id="1-Apicompat"><a href="#1-Apicompat" class="headerlink" title="1.Apicompat"></a>1.Apicompat</h2><p><a href="https://github.com/bradleyfalzon/apicompat" target="_blank" rel="noopener">Apicompat</a>是一种新的Go语言工具，可帮助开发人员检测向后不兼容的更改和导出的声明。</p>
+<p>你可以通过Apicompat避免误报。但是，Apicompat并不能检测到每个向后不兼容的变化。并且，库作者没有考虑到交换参数和其他更改的需要。</p>
+<h2 id="2-Checkstyle"><a href="#2-Checkstyle" class="headerlink" title="2.Checkstyle"></a>2.Checkstyle</h2><p>受Java Checkstyle启发，针对Golang的<a href="https://github.com/qiniu/checkstyle" target="_blank" rel="noopener">Checkstyle</a>输出编码风格的建议。它还允许开发人员检查文件行/函数和行/参数号，然后由用户进行配置。</p>
+<h2 id="3-Depth"><a href="#3-Depth" class="headerlink" title="3.Depth"></a>3.Depth</h2><p>又一个有用的Golang工具，<a href="https://github.com/KyleBanks/depth" target="_blank" rel="noopener">Depth</a>可帮助Web开发人员检索和可视化Go源代码依赖关系树。它可以用作独立的命令行应用程序或作为项目中的特定包。你可以通过在解析之前在Tree上设置相应的标志来添加自定义。</p>
+<h2 id="4-Go-Swagger"><a href="#4-Go-Swagger" class="headerlink" title="4.Go-Swagger"></a>4.Go-Swagger</h2><p>该工具包包括各种功能和功能。<a href="https://github.com/go-swagger/go-swagger" target="_blank" rel="noopener">Go-Swagger</a>是Swagger 2.0的一个实现，可以序列化和反序列化swagger规范。它是RESTful API简约但强大的代表。</p>
+<p>通过Go-Swagger，你可以swagger规范文档，验证JSON模式以及其他额外的规则。其他功能包括代码生成，基于swagger规范的API生成，基于代码的规范文档生成，扩展了的字符串格式，等等。</p>
+<h2 id="5-Go-Meta-Linter"><a href="#5-Go-Meta-Linter" class="headerlink" title="5.Go Meta Linter"></a>5.Go Meta Linter</h2><p>如果你需要运行Go lint工具并同时使其输出正常化，那么Go Meta Linter可以为你办到。<a href="https://github.com/alecthomas/gometalinter" target="_blank" rel="noopener">Go Meta Linter</a>旨在与文本编辑器或IDE集成，如如Sublime Linter插件，Atom go-plus包，Emacs Flycheck检查器，Vim / Neovim，以及Go for Visual Studio Code一起使用。它还支持各种各样的linter和配置文件，如JSON。</p>
+<h2 id="6-Go-callvis"><a href="#6-Go-callvis" class="headerlink" title="6.Go-callvis"></a>6.Go-callvis</h2><p><a href="https://github.com/TrueFurby/go-callvis" target="_blank" rel="noopener">Go-callvis</a>是一个Web开发工具，允许你使用Graphviz的点格式可视化Go程序的调用图。此工具在构建具有复杂代码库的大型项目时特别有用。它在你想要了解另一个开发人员的代码结构或重建别人的项目时，也很有用。</p>
+<p>通过go-callvis，开发人员可以在程序中关注特定包；根据软件包的分组函数和根据类型的方法；以及将软件包限制到自定义路径前缀，并忽略那些包含它们的自定义前缀。</p>
+<h2 id="7-Gonative"><a href="#7-Gonative" class="headerlink" title="7.Gonative"></a>7.Gonative</h2><p><a href="https://github.com/inconshreveable/gonative" target="_blank" rel="noopener">Gonative</a>是一个简单的Golang工具，让你能够使用本机库构建Go工具链，而这可以在使用stdlib软件包的Cgo-enabled版本时进行交叉编译。</p>
+<p>Gonative为每个平台下载二进制发行版，并将它们的库复制到正确的位置。同时，Gonative设置正确的mod时间，以避免不必要的重建。</p>
+<p>不幸的是，Gonative在Windows上仍然未经测试。此外，也没有提供Linux / arm支持。</p>
+<h2 id="8-Grapes"><a href="#8-Grapes" class="headerlink" title="8.Grapes"></a>8.Grapes</h2><p><a href="https://github.com/yaronsumel/grapes" target="_blank" rel="noopener">Grapes</a>是一种轻量级的Golang工具，旨在轻松地通过SSH分发命令。它由Yaron Sumel编写和积极维护。</p>
+<p>Grapes不久将支持完整的主机密钥验证，这是开发人员应该注意到的。</p>
+<h2 id="9-Gosimple"><a href="#9-Gosimple" class="headerlink" title="9.Gosimple"></a>9.Gosimple</h2><p>Golang linter的伟大之处在于它专注于简化Go源代码。Gosimple始终将最新的Go版本作为目标，因此它需要Go 1.6或更高版本。</p>
+<p>如果有新的Go版本，gosimple会建议最轻松和最简单的方法来避免复杂的构造。</p>
+<h2 id="10-Go-Vendor"><a href="#10-Go-Vendor" class="headerlink" title="10.Go Vendor"></a>10.Go Vendor</h2><p><a href="https://github.com/kardianos/govendor" target="_blank" rel="noopener">Go Vendor</a>是与标准Vendor文件夹兼容的Golang工具。它允许开发人员通过govendor add / update从$GOPATH中复制现有的依赖关系。你还可以通过govendor fetch直接提取新的依赖关系或更新现有的依赖关系，以及使用govendor迁移来移动旧的系统。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>如果你有JS / Node背景，那么你还需要学习一些新的编程概念，如协同程序，通道，严格的类型与编译，接口，结构，指针和其他一些差异。但是，一旦你进入状态，你会发现Golang用起来更容易，也更快。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/blog/uploads/wechatpay.jpg" alt="Larry Koo WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/blog/uploads/alipay.jpg" alt="Larry Koo Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/Go/" rel="tag"># Go</a>
+          
+            <a href="/blog/tags/Golang/" rel="tag"># Golang</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/10/23/python-versions-pyenv/" rel="next" title="Python 多版本管理之 pyenv">
+                <i class="fa fa-chevron-left"></i> Python 多版本管理之 pyenv
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/06/08/best-springboot-dockerfile/" rel="prev" title="Spring-Boot项目中 Dockerfile 最佳实践">
+                Spring-Boot项目中 Dockerfile 最佳实践 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDMyOC82ODgx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/blog/uploads/avatar.jpg"
+               alt="Larry Koo" />
+          <p class="site-author-name" itemprop="name">Larry Koo</p>
+           
+              <p class="site-description motion-element" itemprop="description">一个爱穿NB的JAVA码农</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/blog/archives/">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/blog/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/blog/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/blog/rss2.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang框架"><span class="nav-number">1.</span> <span class="nav-text">Golang框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Revel"><span class="nav-number">1.1.</span> <span class="nav-text">1.Revel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Beego"><span class="nav-number">1.2.</span> <span class="nav-text">2.Beego</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Martini"><span class="nav-number">1.3.</span> <span class="nav-text">3.Martini</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Gin-Gonic"><span class="nav-number">1.4.</span> <span class="nav-text">4.Gin Gonic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Buffalo"><span class="nav-number">1.5.</span> <span class="nav-text">5.Buffalo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Goji"><span class="nav-number">1.6.</span> <span class="nav-text">6.Goji</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Tiger-Tonic"><span class="nav-number">1.7.</span> <span class="nav-text">7.Tiger Tonic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Gocraft"><span class="nav-number">1.8.</span> <span class="nav-text">8. Gocraft</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Mango"><span class="nav-number">1.9.</span> <span class="nav-text">9.Mango</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang的集成开发环境（IDE）"><span class="nav-number">2.</span> <span class="nav-text">Golang的集成开发环境（IDE）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Gogland"><span class="nav-number">2.1.</span> <span class="nav-text">1.Gogland</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Visual-Studio-Code"><span class="nav-number">2.2.</span> <span class="nav-text">2. Visual Studio Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-LiteIDE"><span class="nav-number">2.3.</span> <span class="nav-text">3. LiteIDE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Wide"><span class="nav-number">2.4.</span> <span class="nav-text">4.Wide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-带有Go-Plus插件的Atom"><span class="nav-number">2.5.</span> <span class="nav-text">5.带有Go-Plus插件的Atom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-带有GoClipse的Eclipse"><span class="nav-number">2.6.</span> <span class="nav-text">6.带有GoClipse的Eclipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-带有GoSublime的Sublime-Text"><span class="nav-number">2.7.</span> <span class="nav-text">7.带有GoSublime的Sublime Text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-带有Vim-Go插件的Vim"><span class="nav-number">2.8.</span> <span class="nav-text">8.带有Vim-Go插件的Vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Komodo"><span class="nav-number">2.9.</span> <span class="nav-text">9.Komodo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-带有Go语言（golang-org）支持插件的IntelliJ-IDEA"><span class="nav-number">2.10.</span> <span class="nav-text">10. 带有Go语言（golang.org）支持插件的IntelliJ IDEA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang工具"><span class="nav-number">3.</span> <span class="nav-text">Golang工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Apicompat"><span class="nav-number">3.1.</span> <span class="nav-text">1.Apicompat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Checkstyle"><span class="nav-number">3.2.</span> <span class="nav-text">2.Checkstyle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Depth"><span class="nav-number">3.3.</span> <span class="nav-text">3.Depth</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Go-Swagger"><span class="nav-number">3.4.</span> <span class="nav-text">4.Go-Swagger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Go-Meta-Linter"><span class="nav-number">3.5.</span> <span class="nav-text">5.Go Meta Linter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Go-callvis"><span class="nav-number">3.6.</span> <span class="nav-text">6.Go-callvis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Gonative"><span class="nav-number">3.7.</span> <span class="nav-text">7.Gonative</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Grapes"><span class="nav-number">3.8.</span> <span class="nav-text">8.Grapes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Gosimple"><span class="nav-number">3.9.</span> <span class="nav-text">9.Gosimple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-Go-Vendor"><span class="nav-number">3.10.</span> <span class="nav-text">10.Go Vendor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Larry Koo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("jJFgM9rUVNgL4FNyh7Q3C4OV-gzGzoHsz", "v1y0wFIuV4Ouc4Ee2t1esFd0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
