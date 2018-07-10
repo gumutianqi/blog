@@ -1,10 +1,10 @@
 ---
 title: 关键业务系统的JVM参数使用推荐(转载)
 date: 2016-11-01 13:11:10
-categories: JAVA
+categories: Java
 tags: 
-	- JAVA
-	- JVM
+	- Java
+	- Jvm
 permalink: useful-jvm-experience
 ---
 
